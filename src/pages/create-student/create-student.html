@@ -19,6 +19,10 @@
 <ion-content padding>
   <form (ngSubmit)="submitStudent()">
     <ion-item>
+      <ion-label>Index No</ion-label>
+      <ion-input type="text" [(ngModel)]="student.indexno" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
       <ion-label>Name</ion-label>
       <ion-input type="text" [(ngModel)]="student.name" name="name"></ion-input>
     </ion-item>

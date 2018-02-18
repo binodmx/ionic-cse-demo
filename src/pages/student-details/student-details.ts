@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Student } from '../../data-models/Student';
+import { StudentService } from '../../services/student-service';
 /**
  * Generated class for the StudentDetailsPage page.
  *
@@ -14,8 +15,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'student-details.html',
 })
 export class StudentDetailsPage {
-
+  public student;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  	this.student=navParams.get('student');
   }
 
   ionViewDidLoad() {

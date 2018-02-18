@@ -18,8 +18,9 @@
 
 <ion-content padding>
   <ion-list *ngIf="showList">
-    <ion-item *ngFor="let student of students">
-      <h3>{{student.name}}</h3>
+    <ion-item *ngFor="let student of students" (click)="goToPage(student)">
+      <h2>{{student.indexno}}</h2>
+      <p>{{student.name}}</p>
       <p>{{student.address}}</p>
       <p>{{student.age}} years old</p>
     </ion-item>
